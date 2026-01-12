@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zlatan Ibrahimović – Fakta</title>
+
+    <!-- CSS -->
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #111;
+            color: #fff;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .header-bild {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 4px solid #f1c40f;
+        }
+
+        nav {
+            background-color: #222;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav button {
+            background-color: #f1c40f;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        nav button:hover {
+            background-color: #d4ac0d;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            background-color: #fff;
+        }
+
+        section {
+            display: none;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #111;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Bild i headern -->
+        <img src="bilder/zlatan.jpg" alt="Zlatan Ibrahimović" class="header-bild">
+        <h1>Zlatan Ibrahimović</h1>
+        <p>En av världens bästa fotbollsspelare genom tiderna</p>
+    </header>
+
+    <nav>
+        <button onclick="showSection('bio')">Biografi</button>
+        <button onclick="showSection('career')">Karriär</button>
+        <button onclick="showSection('facts')">Fakta</button>
+    </nav>
+
+    <main>
+        <section id="bio" class="active">
+            <h2>Biografi</h2>
+            <p>Zlatan Ibrahimović föddes den 3 oktober 1981 i Malmö, Sverige. Han är känd för sin styrka, teknik och självsäkra personlighet både på och utanför planenMeriter & rekord
+
+En av Sveriges bästa fotbollsspelare genom tiderna
+
+Gjorde över 500 mål i sin seniorkarriär
+.</p>
+        </section>
+
+        <section id="career">
+            <h2>Karriär</h2>
+            <ul>
+                <li>Malmö FF</li>
+                <li>Ajax</li>
+                <li>Juventus</li>
+                <li>Inter</li>
+                <li>Barcelona</li>
+                <li>AC Milan</li>
+                <li>Paris Saint-Germain</li>
+                <li>Manchester United</li>
+                <li>LA Galaxy</li>
+            </ul>
+        </section>
+
+        <section id="facts">
+            <h2>Snabba fakta</h2>
+            <ul>
+                <li>Smeknamn: Ibra</li>
+                <li>Född: 3 oktober 1981</li>
+                <li>Längd: 195 cm</li>
+                <li>Position: Anfallare</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Zlatan Ibrahimovic
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('main section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
